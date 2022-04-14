@@ -24,14 +24,14 @@ export default function Leaderboard(){
             let secondesB = timeB.secondes
 
             if ( nbCoupsA != nbCoupsB ){
-                return nbCoupsA < nbCoupsB
+                return nbCoupsA < nbCoupsB ? -1 : 1
             }
             else {
                 if ( minutesA != minutesB){
-                    return minutesA < minutesB
+                    return minutesA < minutesB ? -1 : 1
                 }
                 else{
-                    return secondesA < secondesB
+                    return secondesA < secondesB ? -1 : 1
                 }
             }
         })
