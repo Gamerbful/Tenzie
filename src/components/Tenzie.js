@@ -26,7 +26,7 @@ export default function Tenzie(props){
     });
 
   })
-  const [info,setInfo] = useState( () => false ) // tell if we are on info slide else we have content
+  const [info,setInfo] = useState( () => true ) // tell if we are on info slide else we have content
   const [anim,setAnim] = useState( () => false ) // tell if we are in animation state
   const [toggle,setToggle] = useState ( () => false ) // tell if we click the toggle button
   const [nbCoups, setNbCoups] = useState ( () => 0) // number of rolls

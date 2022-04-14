@@ -85,7 +85,7 @@ canvas {
     z-index: -1;
     transform: translateX(90%);
     position: absolute;
-    width:10%;
+    width:40%;
     height:50%;
     background-color: #5035FF;
     border-radius: 7px;
@@ -266,8 +266,34 @@ canvas {
     background-color: #F5F5F5;
     display: flex;
     flex-direction: column;
+    padding: 10px 20px;
     align-items: center;
     right:70px;
     margin:auto;
     border-radius: 7px 7px;
+}
+
+.lb--wrapper h1{
+    border-bottom:1px solid  #2c2d3f60;
+    margin-bottom: 10%;
+}
+
+.lb--data {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.lb--data div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:10%;
+    width: 100%;
+}
+
+.lb--data div h5 {
+    width:33%;
+    text-align: center;
 }

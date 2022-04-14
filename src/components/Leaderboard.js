@@ -44,13 +44,21 @@ export default function Leaderboard(){
         return lbData.slice(0,10).map(data => {
             let {minutes,secondes} = data.highscore.timeElapsed
             secondes = secondes < 10 ? `0${secondes}` : `${secondes}`
-            return <h5 key={data._id}>{`${data._id} ${minutes}:${secondes} ${data.highscore.nbCoups}`}</h5>
+            return (
+                <div key={data._id}>
+                <h5 >{`${data._id}`}</h5> 
+                <h5>{`${minutes}:${secondes}`}</h5>
+                <h5>{`${data.highscore.nbCoups}`}</h5>
+                </div>
+            )
         } )
     }
     return(
         <div className='lb--wrapper'>
             <h1>Leaderboard</h1>
+            <section className='lb--data'>
             {renderData()}
+            </section>
         </div>
     )
 }
