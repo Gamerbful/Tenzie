@@ -37,18 +37,31 @@
 
 
 .content--button {
+    box-sizing:border-box;
     background: #5035FF;
     box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
     border-radius: 4px;
-    width:150px;
-    height:50px;
+    width:100%;
+    height:100%;
     border:none;
     color:white;
     font-size:1.5em;
     cursor:pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
+.button--wrapper {
+    width:150px;
+    height: 50px;
+}
 
+.content--button img {
+    max-height: 80%;
+    margin-right:2%;
+}
 .green {
     background-color: #59E391;
 }
@@ -73,11 +86,10 @@ canvas {
     transform: translateX(90%);
     position: absolute;
     width:10%;
-    height:40%;
+    height:50%;
     background-color: #5035FF;
     border-radius: 7px;
-    writing-mode: vertical-rl;
-    text-orientation: use-glyph-orientation;
+
 
     display: flex;
     justify-content: center;
@@ -85,4 +97,177 @@ canvas {
     color:white;
     font-size: 2em;
     cursor: pointer;
+    transition: width 0.5s ease-in-out;
+}
+
+.info > p {
+    z-index: -1;
+
+}
+
+
+.highscore {
+    border-radius: 7px;
+    width:30%;
+    height:20%;
+    position: absolute;
+    top:10px;
+    left:0;
+    transform: translateX(-20%);
+    background-color: #59E391;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.wrapper {
+    z-index: 10;
+}
+
+
+
+.appear{
+    transition: opacity 0.25s ease-in-out;
+}
+
+.display {
+    margin-left:5%;
+    font-size: 0.5em;
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding:10% 0px;
+
+}
+
+.display h2:nth-of-type(even) {
+    color:#e9441b;
+}
+
+.display h2:nth-of-type(odd) {
+    color:#59E391;
+}
+
+.label {
+    writing-mode: vertical-rl;
+    text-orientation: use-glyph-orientation;
+}
+
+
+.createAccount {
+    position: relative;
+    border-radius: 7px;
+    min-width: 0;
+    width:100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.createAccount * {
+    z-index: 4;
+}
+
+.createAccount section {
+    width:70%;
+    height:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.createAccount section label {
+    font-size: 1.2em;
+}
+.createAccount input{
+    width: 100%;
+    height:50px;
+    font-size: 1.5em;
+    font-family: 'Sora';
+    border-radius: 7px 7px;
+    border:none;
+    text-align: center;
+    outline: none;
+    background-color: #0e4931d0;
+    color:#f6fffc;
+}
+
+.createAccount button{
+    font-family: inherit;
+    font-size: 1.5em;
+    background-color: #2c2d3f;
+    width:35%;
+    border-radius: 7px;
+    height:10%;
+    border:none;
+    transition: transform 0.4s ease;
+    color:#F5F5F5;
+}
+
+
+
+
+.createAccount button:hover{
+    transform: scale(120%);
+    cursor: pointer;
+}
+
+.form--wrapper {
+    position: relative;
+    display: flex;
+    margin:auto;
+    width:800px;
+    height: 550px;
+    border-radius: 7px;
+}
+
+.form--logo {
+    top:10px;
+    right:20px;
+    position: absolute;
+    max-width: 70px;
+    z-index: 4;
+}
+
+.form--error {
+    font-family: inherit;
+    color:#e9441b;
+}
+
+.form--img {
+    position: absolute;
+    z-index: 3;
+}
+
+.first {
+    left:0;
+    bottom:0;
+    transform: translateY(50%) translateX(-20%);
+}
+
+.second {
+    right:0;
+    top:0;
+    transform:translateX(20%) translateY(-40%) scale(120%);
+}
+
+
+.lb--wrapper{
+    position: absolute;
+    height:400px;
+    width:250px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right:70px;
+    margin:auto;
+    border-radius: 7px 7px;
 }
