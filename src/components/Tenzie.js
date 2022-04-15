@@ -4,7 +4,7 @@ import Highscore from './Highscore'
 import Die from './Die'
 import Leaderboard from './Leaderboard'
 import {useState,useEffect} from 'react';
-
+import Draggable from 'react-draggable';
 import {nanoid} from 'nanoid';
 const confetti = require('canvas-confetti');
 
@@ -59,7 +59,6 @@ export default function Tenzie(props){
   },[dices])
 
   useEffect(() => {
-    console.log("dkd")
       async function loadHighscore() {
        
     await fetch(`https://bryanserver.herokuapp.com/record/${getCookie("temporaryKey")}`)

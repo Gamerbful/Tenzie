@@ -40,6 +40,16 @@ export default function Leaderboard(){
     }
 
 
+    function renderColumns() {
+        return (
+            <div className="lb--columns">
+            <h5 >Name</h5> 
+            <h5>Time</h5>
+            <h5>Steps</h5>
+            </div>
+        )
+    }
+
     function renderData(){
         return lbData.slice(0,10).map(data => {
             let {minutes,secondes} = data.highscore.timeElapsed
@@ -53,11 +63,14 @@ export default function Leaderboard(){
             )
         } )
     }
+
+
     return(
         <div className='lb--wrapper'>
             <h1>Leaderboard</h1>
             <section className='lb--data'>
-            {renderData()}
+            {renderColumns()}
+            { renderData()}
             </section>
         </div>
     )

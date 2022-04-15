@@ -1,6 +1,9 @@
 
 import Tenzie from './components/Tenzie';
-import Register from './components/Register'
+import Register from './components/Register';
+import Main from './components/Main';
+import Header from './components/Header';
+import Login from './components/Login';
 import './App.css';
 
 
@@ -17,17 +20,17 @@ console.log(document.cookie)
 function App() {
   return (
     <Router>
-
-    <Link className=".link" to="/register">Register</Link>
-    <Link className=".link" to="/projects/tenzie">Tenzie</Link>
     <Routes>
-      <Route path="/projects/tenzie" element={        
-      <Tenzie />
-         }>
+      <Route path="/projects/tenzie" element={ <><Header/><Tenzie /></>}>
       </Route>
-
-      <Route path="/register" element={<Register />}>
+      <Route path="/login" element={ <><Header/><Login /></>}>
+      </Route>
+      <Route path="/register" element={<><Header/><Register /></>}>
             
+    </Route>
+
+    <Route path="/" element={<><Header/><Main /></>}>
+
     </Route>
     </Routes>
     </Router>

@@ -38,7 +38,7 @@
 
 .content--button {
     box-sizing:border-box;
-    background: #5035FF;
+    background: #5d46f3;
     box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
     border-radius: 4px;
     width:100%;
@@ -56,6 +56,19 @@
 .button--wrapper {
     width:150px;
     height: 50px;
+}
+
+.button--wrapper:hover{
+    animation : wiggle 1.4s infinite alternate-reverse;
+}
+
+@keyframes wiggle{
+    0%{transform: rotateZ(2deg);}
+    20%{transform: rotateZ(-2deg);}
+    40%{transform: rotateZ(2deg);}
+    60%{transform: rotateZ(-2deg);}
+    80%{transform: rotateZ(2deg);}
+    100%{transform: rotateZ(0deg);}
 }
 
 .content--button img {
@@ -87,7 +100,7 @@ canvas {
     position: absolute;
     width:40%;
     height:50%;
-    background-color: #5035FF;
+    background-color: #5d46f3;
     border-radius: 7px;
 
 
@@ -107,6 +120,10 @@ canvas {
 
 
 .highscore {
+    color:rgb(255, 251, 251);
+    justify-content: center;
+    align-items: center;
+    display: flex;
     border-radius: 7px;
     width:30%;
     height:20%;
@@ -116,6 +133,11 @@ canvas {
     transform: translateX(-20%);
     background-color: #59E391;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition:all 0.7s ease;
+}
+
+.highscore h2 {
+    color:rgba(253, 255, 130, 0.986)
 }
 
 .wrapper {
@@ -268,7 +290,8 @@ canvas {
     flex-direction: column;
     padding: 10px 20px;
     align-items: center;
-    right:70px;
+    left:100px;
+    top:20%;
     margin:auto;
     border-radius: 7px 7px;
 }
@@ -289,7 +312,7 @@ canvas {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height:10%;
+    height:9%;
     width: 100%;
 }
 
@@ -297,3 +320,51 @@ canvas {
     width:33%;
     text-align: center;
 }
+
+.lb--columns {
+    color:rgba(63, 167, 15, 0.712);
+    font-size: large;
+}
+
+header {
+    width:100%;
+    height:75px;
+    background-color: #59E391;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.link {
+    display: inline-block;
+    position: relative;
+    font-family: "Karla";
+    font-size: 1.7em;
+    outline: none;
+    color:black;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+
+  .link:after {
+    content: '';
+    position: absolute;
+    width: 102%;
+    transform: scaleX(0);
+    border-radius: 7px 10px;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgba(3, 1, 1, 0.651);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
